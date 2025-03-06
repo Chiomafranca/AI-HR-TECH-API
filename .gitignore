@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# Build directories
+dist/
+build/
+
+# IDE or Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Package lock files (if using Yarn)
+package-lock.json
+yarn.lock
