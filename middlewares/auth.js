@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
 const authMiddleware = async (req, res, next) => {
+  
   const token = req.header("Authorization")?.split(" ")[1];
 
   if (!token) return res.status(401).json({ message: "Unauthorized, no token" });
@@ -13,6 +14,7 @@ const authMiddleware = async (req, res, next) => {
     if (!req.user) return res.status(401).json({ message: "User not found" });
 
     next();
+
   } catch (err) {
     res.status(401).json({ message: "Invalid token" });
   }
